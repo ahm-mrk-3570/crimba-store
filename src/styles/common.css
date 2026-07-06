@@ -1,0 +1,39 @@
+a {
+  font-weight: 500;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--text-hover);
+}
+
+ul {
+  list-style: none;
+}
+
+#root > div {
+  width: 100vw;
+  height: 100svh;
+}
+
+.portal-order-view {
+  position: absolute;
+  width: 100%;
+  height: 100svh;
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--shadow);
+  color: var(--text-color);
+  z-index: 100;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+button {
+  cursor: pointer;
+}

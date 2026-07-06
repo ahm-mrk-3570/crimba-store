@@ -1,0 +1,82 @@
+.card-container-comments {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  .top-stars {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    margin: 0.75rem 0;
+    gap: 1rem;
+
+    p {
+      font-size: small;
+    }
+
+    img {
+      max-height: 25px;
+    }
+  }
+
+  .middle-content-comment {
+    width: 100%;
+    flex: 1;
+    max-height: 88px;
+    overflow: auto;
+  }
+
+  .profile-comments {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    border: none;
+    background-color: var(--surface);
+    border-radius: 0.75rem;
+    padding: 0.5rem;
+    margin-top: 1rem;
+
+    .profile-image {
+      width: 60px;
+      height: 60px;
+      overflow: hidden;
+      border-radius: 50%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .contact-info {
+      flex: 1;
+      padding-left: 0.45rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+
+      h5 {
+        width: 100%;
+        font-size: x-large;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.swiper-slide {
+  padding: 15px !important;
+}

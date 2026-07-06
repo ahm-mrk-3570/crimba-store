@@ -1,0 +1,91 @@
+.main-add-review-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 1rem;
+
+  .review-detail {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 0.5rem;
+
+    .rating-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: start;
+      gap: 0.75rem;
+
+      .rating {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+        gap: 0.5rem;
+
+        img {
+          padding-inline: 1rem;
+          border-right: 1px solid var(--border);
+          cursor: pointer;
+
+          &:last-child {
+            border: none;
+          }
+        }
+      }
+    }
+
+    label {
+      font-size: large;
+      margin-top: 1rem;
+    }
+
+    > input,
+    > textarea {
+      width: 100%;
+      padding: 1rem;
+      border-radius: 0.75rem;
+      background-color: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-primary);
+      outline: none;
+
+      &::placeholder {
+        color: var(--text-muted);
+      }
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 300px;
+    }
+
+    .submit-review {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: start;
+    }
+
+    input[type="submit"] {
+      padding: 1rem 3rem;
+      background-color: var(--surface);
+      color: var(--text-primary);
+      border: none;
+      border-radius: 0.75rem;
+      cursor: pointer;
+    }
+  }
+}

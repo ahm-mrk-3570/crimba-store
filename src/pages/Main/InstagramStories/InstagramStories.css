@@ -1,0 +1,191 @@
+.stories-container {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  margin: 5rem 0;
+
+  @media (width <= 768px) {
+    padding-inline: 1rem !important;
+  }
+
+  .stories-header {
+    width: 100%;
+    height: auto;
+    padding: 0 0 5rem 0;
+    text-align: center;
+  }
+
+  .stories-main {
+    width: 100% !important;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+
+    .stories-content {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: start;
+      aspect-ratio: 1/1;
+      overflow: hidden;
+      transition:
+        scale 0.5s,
+        border-radius 0.5s,
+        filter 0.5s;
+      filter: blur(0);
+
+      &:hover {
+        scale: 1.3;
+        border-radius: 0.75rem;
+
+        @media (width <= 768px) {
+          scale: 1.03;
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+      }
+    }
+  }
+}
+
+/* Responsive */
+/* below 300px */
+@media (max-width: 299px) {
+  .stories-container {
+    padding-inline: 0;
+  }
+
+  .stories-main {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+  }
+
+  .stories-content {
+    width: 100%;
+  }
+
+  .stories-content:hover {
+    scale: 1;
+    border-radius: 0.75rem;
+  }
+
+  .stories-main:hover .stories-content:not(:hover) {
+    filter: blur(10px);
+    scale: 0.75;
+  }
+}
+
+/* below 480px -- above 300px */
+@media (min-width: 300px) and (max-width: 479px) {
+  .stories-container {
+    padding-inline: 0;
+  }
+
+  .stories-main {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+  }
+
+  .stories-content {
+    width: 100%;
+  }
+
+  .stories-content:hover {
+    scale: 1;
+    border-radius: 0.75rem;
+  }
+
+  .stories-main:hover .stories-content:not(:hover) {
+    filter: blur(10px);
+    scale: 0.75;
+  }
+}
+
+/* below 768px -- above 480px */
+@media (min-width: 480px) and (max-width: 767px) {
+  .stories-container {
+    padding-inline: 0;
+  }
+
+  .stories-main {
+    width: 95%;
+    gap: 0.25rem;
+  }
+
+  .stories-content {
+    width: 100%;
+  }
+
+  .stories-content:hover {
+    scale: 1;
+    border-radius: 0.75rem;
+  }
+
+  .stories-main:hover .stories-content:not(:hover) {
+    filter: blur(10px);
+    scale: 0.75;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .stories-container {
+    padding-inline: 0;
+  }
+
+  .stories-main {
+    width: 90%;
+    gap: 0.25rem;
+  }
+
+  .stories-content {
+    width: 100%;
+  }
+
+  .stories-content:hover {
+    scale: 1;
+    border-radius: 0.75rem;
+  }
+
+  .stories-main:hover .stories-content:not(:hover) {
+    filter: blur(10px);
+    scale: 0.75;
+  }
+}
+
+@media (min-width: 1024px) {
+  .stories-container {
+    padding-inline: 0;
+  }
+
+  .stories-main {
+    width: 90%;
+    gap: 0.25rem;
+  }
+
+  .stories-content {
+    width: 100%;
+  }
+
+  .stories-content:hover {
+    scale: 1;
+    border-radius: 0.75rem;
+  }
+
+  .stories-main:hover .stories-content:not(:hover) {
+    filter: blur(10px);
+    scale: 0.75;
+  }
+}

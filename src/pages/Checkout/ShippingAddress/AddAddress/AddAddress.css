@@ -1,0 +1,68 @@
+.add-address {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+
+  > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+
+    > label {
+      font-size: small;
+    }
+
+    > input,
+    > select {
+      width: 100%;
+      height: 45px;
+      border: 1px solid var(--border);
+      background-color: var(--surface);
+      color: var(--text-primary);
+      border-radius: 0.5rem;
+      padding: 0.25rem 1rem;
+      font-size: medium;
+    }
+  }
+
+  .use-default-address {
+    flex-direction: row !important;
+    height: auto !important;
+    align-items: center;
+    cursor: pointer;
+
+    label {
+      flex: 1;
+      cursor: pointer;
+      margin-left: 0.25rem;
+      font-size: medium !important;
+    }
+
+    #use-default-address {
+      width: 15px;
+      cursor: pointer;
+    }
+  }
+
+  .add-new-address {
+    width: 350px;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--surface);
+    color: var(--text-primary);
+    border: none;
+    outline: none;
+    border-radius: 0.75rem;
+    font-size: large;
+  }
+}

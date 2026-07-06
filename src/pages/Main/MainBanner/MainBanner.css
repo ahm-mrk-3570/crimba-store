@@ -1,0 +1,26 @@
+.main-banner {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  animation: main-banner-animate 1s ease-in-out;
+}
+
+.main-banner > img {
+  width: 100%;
+  height: auto;
+}
+
+@keyframes main-banner-animate {
+  from {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

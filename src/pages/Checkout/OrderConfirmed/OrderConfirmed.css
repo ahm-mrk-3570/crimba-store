@@ -1,0 +1,126 @@
+.portal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  overflow: hidden;
+  animation: overlayFadeIn 0.2s ease;
+}
+
+@keyframes overlayFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.order-confirmed {
+  max-width: 600px;
+  background-color: white;
+  color: black;
+  border-radius: 1rem;
+  padding-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.order-confirmed-img {
+  width: 125px;
+  height: 125px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(201, 201, 201);
+  border-radius: 50%;
+  position: relative;
+  z-index: 0;
+}
+
+.order-confirmed-img::before {
+  width: 75px;
+  height: 75px;
+  content: "";
+  position: absolute;
+  background-color: gray;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.order-confirmed-img::after {
+  width: 99px;
+  height: 99px;
+  content: "";
+  position: absolute;
+  background-color: black;
+  border-radius: 50%;
+  z-index: 2;
+  opacity: 0.5;
+}
+
+.order-confirmed-img > svg {
+  z-index: 10;
+}
+
+.order-confirmed-texts {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 0;
+  gap: 0.25rem;
+  padding: 1.5rem 5rem;
+}
+
+.order-confirmed-texts h2 {
+  font-size: x-large;
+}
+
+.order-confirmed-texts p {
+  text-align: center;
+  font-size: large;
+}
+
+.order-confirmed-buttons {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  padding: 0.5rem;
+}
+
+.order-confirmed-buttons button {
+  width: 100%;
+  height: 60px;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  font-size: large;
+  cursor: pointer;
+}
+
+.order-confirmed-buttons button:first-child {
+  background-color: var(--bg-secondary-color);
+  color: var(--text-secondary-color);
+}
+
+.order-confirmed-buttons button:last-child {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}

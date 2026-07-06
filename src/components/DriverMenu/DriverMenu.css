@@ -1,0 +1,69 @@
+.driver-menu {
+  width: 80%;
+  max-width: 450px;
+  height: 100%;
+  background: var(--surface);
+  transition-delay: 0.5s;
+  transition: width 0.5s;
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: start;
+  overflow: hidden;
+  position: relative;
+  align-self: flex-start;
+
+  .header-driver-menu {
+    width: 100%;
+    min-height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 1rem;
+    border-bottom: 1px solid var(--border);
+
+    > div {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      cursor: pointer;
+
+      img {
+        height: 40px;
+      }
+    }
+
+    .back-icon {
+      aspect-ratio: 1 / 1;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border);
+      background-color: var(--background);
+      color: var(--text-muted);
+      border-radius: 0.5rem;
+      width: 40px;
+      transition: all 0.5s;
+
+      &:hover {
+        background-color: var(--surface);
+        color: var(--text-primary);
+      }
+    }
+  }
+
+  .driver-content {
+    width: 100%;
+    flex: 1;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+  }
+}

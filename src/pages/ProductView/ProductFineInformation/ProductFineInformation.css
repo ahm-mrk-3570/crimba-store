@@ -1,0 +1,116 @@
+@keyframes widthOpen {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.product-fine-information {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem 0;
+
+  @media (width <= 768px) {
+    padding-inline: 1rem;
+  }
+
+  .product-fine-information-main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 1rem;
+
+    .header-product-fine-info {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      gap: 3rem;
+      font-weight: bold;
+      font-size: x-large;
+      overflow: auto;
+
+      @media (width <= 768px) {
+        gap: 1rem;
+      }
+
+      div {
+        padding: 1rem 0;
+        cursor: pointer;
+        position: relative;
+
+        @media (width <= 768px) {
+          font-size: medium;
+        }
+
+        &:before {
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+          height: 3px;
+          background-color: var(--border);
+          animation: widthOpen 0.5s ease-in forwards;
+        }
+      }
+
+      .section-active {
+        &::before {
+          content: "";
+        }
+      }
+    }
+
+    .container-product-fine-info {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: start;
+
+      > div {
+        display: none;
+
+        &:first-child {
+          display: flex;
+        }
+      }
+
+      .description-main-fine {
+        width: 100%;
+      }
+
+      .review-main-fine {
+        width: 100%;
+      }
+
+      .additional-main-fine {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        gap: 0.5rem;
+
+        .additional-container-item {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: start;
+          gap: 1.5rem;
+
+          p {
+            font-weight: 700;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}

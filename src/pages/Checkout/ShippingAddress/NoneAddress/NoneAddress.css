@@ -1,0 +1,16 @@
+.none-address {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.75rem;
+  border: 1px dashed var(--border);
+  gap: 0.5rem;
+  cursor: pointer;
+
+  label {
+    flex: 1;
+    cursor: pointer;
+  }
+}

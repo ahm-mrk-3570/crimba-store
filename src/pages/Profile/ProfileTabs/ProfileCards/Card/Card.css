@@ -1,0 +1,55 @@
+.card-detail-profile {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+  height: 145px;
+  background-color: var(--surface);
+  border: 1px solid var(--surface-2);
+  border-radius: 1.5rem;
+  padding: 1rem 1.5rem;
+
+  .right-side-card-detail {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-evenly;
+
+    .name-card {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+  }
+
+  .button-delete-card {
+    background: rgba(239, 68, 68, 0.06);
+    color: #ef4444;
+    border: none;
+    outline: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    transition: background 0.1s ease-in;
+
+    &:hover {
+      background: rgba(239, 68, 68, 0.12);
+    }
+  }
+}
+
+.card-number-text {
+  font-weight: 600;
+  font-size: x-large;
+}

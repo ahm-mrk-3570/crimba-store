@@ -1,0 +1,119 @@
+/* Swiper Styles */
+.swiper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  height: auto;
+}
+
+.comments-main-container {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--coments-bg-color);
+  margin: 5rem auto;
+
+  .comments-header {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.5rem;
+
+    .title-comments {
+      h1 {
+        font-size: 2rem;
+        font-weight: 600;
+        max-lines: 1;
+        text-wrap: nowrap;
+      }
+    }
+
+    .change-comments {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-items: center;
+      gap: 1rem;
+
+      button {
+        width: 45px;
+        height: 45px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        border-radius: 0.75rem;
+        background-color: var(--surface);
+        border: 1px solid var(--border);
+        color: var(--text-primary);
+        cursor: pointer;
+
+        &:disabled {
+          opacity: 0.2;
+          cursor: default;
+        }
+      }
+    }
+  }
+}
+
+/* below 300px */
+@media (max-width: 299px) {
+  .card-container {
+    flex: 0 0 260px;
+    min-width: 260px;
+    height: 320px;
+  }
+
+  .title-comments > h1 {
+    font-size: small;
+  }
+
+  .change-comments > button {
+    width: 28px;
+    height: 28px;
+    border-radius: 0.25rem;
+    padding: 0.2rem;
+  }
+
+  .comments-header {
+    padding: 0 1rem;
+  }
+}
+
+/* below 480px -- above 300px */
+@media (min-width: 300px) and (max-width: 479px) {
+  .card-container {
+    flex: 0 0 260px;
+    min-width: 260px;
+    height: 320px;
+  }
+
+  .title-comments > h1 {
+    font-size: small;
+  }
+
+  .change-comments > button {
+    width: 28px;
+    height: 28px;
+    border-radius: 0.25rem;
+    padding: 0.2rem;
+  }
+
+  .comments-header {
+    padding: 0 1rem;
+  }
+}
+
+/* below 768px -- above 480px */
+@media (min-width: 480px) and (max-width: 767px) {
+  .title-comments > h1 {
+    font-size: x-large;
+  }
+}

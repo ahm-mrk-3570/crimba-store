@@ -1,0 +1,66 @@
+.profile-cards {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0 1rem;
+
+  .header-profile-cards {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    h2 {
+      font-size: 18px;
+    }
+
+    .details-card-total > p {
+      font-size: 0.8rem;
+    }
+  }
+
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 1rem;
+  }
+
+  .button-card-profile {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--warning);
+    border: none;
+    color: var(--background);
+    padding: 9px 16px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.15s;
+    white-space: nowrap;
+  }
+
+  .no-card-container {
+    width: 100%;
+    height: 169px;
+    background-color: var(--surface);
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 1px dashed var(--border);
+
+    p {
+      color: var(--text-primary);
+      font-size: 14px;
+    }
+  }
+}

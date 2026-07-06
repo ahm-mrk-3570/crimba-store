@@ -1,0 +1,52 @@
+.ap-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  .ap-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-primary);
+
+    .ap-required {
+      color: var(--error);
+      margin-left: 3px;
+    }
+  }
+
+  .ap-input {
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 11px 14px;
+    font-size: 14px;
+    color: var(--text-primary);
+    font-family: inherit;
+    outline: none;
+    transition:
+      border-color 0.15s,
+      box-shadow 0.15s;
+    width: 100%;
+    box-sizing: border-box;
+
+    &::placeholder {
+      color: var(--text-muted);
+    }
+
+    &:focus {
+      border-color: var(--surface-2);
+    }
+
+    &.ap-input--error {
+      border-color: var(--error) !important;
+    }
+  }
+
+  .ap-error-msg {
+    font-size: 11px;
+    color: var(--error);
+    font-weight: 500;
+  }
+}
