@@ -65,9 +65,7 @@ function App() {
     () => localStorage.getItem("theme") ?? "system",
   );
   const [systemPreference, setSystemPreference] = useState(() =>
-    window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light",
+    window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light",
   );
   /* State */
 
